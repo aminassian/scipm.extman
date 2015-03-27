@@ -1,9 +1,9 @@
 {
     "main": "index.js",
     "name": "scipm.extman",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "extman for scipm",
-    "license": "aminassian",
+    "license": "GPL-3.0",
     "repository": {
         "type": "git",
         "url": "git://github.com/aminassian/scipm.extman.git"
