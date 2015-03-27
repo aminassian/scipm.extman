@@ -1,0 +1,89 @@
+{
+    "main": "index.js",
+    "name": "scipm.extman",
+    "version": "0.1.0",
+    "description": "extman for scipm",
+    "license": "aminassian",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/aminassian/scipm.extman.git"
+    },
+    "bugs": {
+        "type": "git",
+        "url": "git://github.com/aminassian/scipm.extman/issues"
+    },
+    "keywords": [
+        "scipm",
+        "extman"
+    ],
+    "dependencies": {
+        "scipm": "^0.1.2"
+    },
+    "scipmchild": {
+        "version": "1",
+        "scipmDependencies": {},
+        "luaRequire": [],
+        "SciTEStartup": {
+            "_use": "dofile",
+            "raw": null,
+            "filePath": null,
+            "dofile": [
+                "scite",
+                "extman.lua"
+            ],
+            "luaReportExtend": "scipm.core.printInfoPackage('scipm.extman')",
+            "infoLuaFunctions": [
+                {"name": "scite_OnWord (called when user has entered a word)"},
+                {"name": "scite_OnEditorLine (called when a line is entered into the editor)"},
+                {"name": "scite_OnOutputLine (called when a line is entered into the output pane)"},
+                {"name": "scite_OnMarginClick(fn,remove)"},
+                {"name": "scite_OnDoubleClick(fn,remove)"},
+                {"name": "scite_OnSavePointLeft(fn,remove)"},
+                {"name": "scite_OnSavePointReached(fn,remove)"},
+                {"name": "scite_OnOpen(fn,remove)"},
+                {"name": "scite_OnSwitchFile(fn,remove)"},
+                {"name": "scite_OnBeforeSave(fn,remove)"},
+                {"name": "scite_OnSave(fn,remove)"},
+                {"name": "scite_OnUpdateUI(fn,remove)"},
+                {"name": "scite_OnChar(fn,remove)"},
+                {"name": "scite_OnOpenSwitch(fn,remove)"},
+                {"name": "scite_GetProp(key,default)"},
+                {"name": "scite_FileExists(f)"},
+                {"name": "scite_CurrentFile()"},
+                {"name": "scite_WordAtPos(pos)"},
+                {"name": "scipm.extman.reload_script()"}
+            ],
+            "infoFiles" : [
+                {"path": ["README.md" ]},
+                {"path": ["package.json" ]},
+                {"path": ["scite", "extman.lua" ]}
+            ],
+            "infoProps": [
+            ]
+        },
+        "actions": {
+            "Reload": {
+                "title": "Reload Script",
+                "description": "Reload lua script",
+                "pattern": [
+                    "*.lua"
+                ],
+                "addToolsMenu": {
+                    "allow": true,
+                    "addContextMenu": false,
+                    "command": {
+                        "shortcuts": "Shift+Ctrl+R",
+                        "subsystem": "luadirector",
+                        "cmd": "dostring scipm.extman.reload_script()",
+                        "isFilter": null,
+                        "saveBefore": "1",
+                        "input": null,
+                        "replaceSelection": null,
+                        "quiet": null,
+                        "mode": null
+                    }
+                }
+            }
+        }
+    }
+}
