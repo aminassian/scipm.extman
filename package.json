@@ -1,7 +1,7 @@
 {
     "main": "index.js",
     "name": "scipm.extman",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "extman for scipm",
     "license": "GPL-3.0",
     "repository": {
@@ -13,11 +13,10 @@
         "url": "git://github.com/aminassian/scipm.extman/issues"
     },
     "keywords": [
-        "scipm",
+        "scipm-package",
         "extman"
     ],
     "dependencies": {
-        "scipm": "^0.1.2"
     },
     "scipmchild": {
         "version": "1",
